@@ -36,7 +36,7 @@ class User(AbstractUser):
     date_joined = None
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    avatar = models.CharField(max_length=255, blank=True, null=True)
+    avatar = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
 
     first_name = models.CharField(max_length=100, blank=True, null=True)
     last_name = models.CharField(max_length=100, blank=True, null=True)
