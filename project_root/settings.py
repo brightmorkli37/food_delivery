@@ -39,7 +39,8 @@ THIRD_PARTY_APPS = [
 ]
     
 CUSTOM_APPS = [
-    'accounts',
+    'accounts', # User authentication and authorization
+    'restautants',
 ]
     
 INSTALLED_APPS += THIRD_PARTY_APPS + CUSTOM_APPS
