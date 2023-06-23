@@ -1,0 +1,1 @@
+from .restaurant_viewset import RestaurantViewSet

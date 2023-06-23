@@ -13,6 +13,7 @@ urlpatterns = [
     path('auth/jwt/create/', TokenObtainPairView.as_view()),
 
     # path('users/', include('accounts.urls', 'accounts')),
+    path('', include('restaurants.urls')),
 ]
 
 urlpatterns += static(
