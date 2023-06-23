@@ -10,10 +10,6 @@ env = environ.Env(
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
 
@@ -23,6 +19,7 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(' ')
 
 AUTH_USER_MODEL = 'accounts.User'
+
 
 # Application definition
 
@@ -37,11 +34,12 @@ INSTALLED_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
-    'djoser'
+    'djoser',
+    'corsheaders',
 ]
     
 CUSTOM_APPS = [
-    'accounts'
+    'accounts',
 ]
     
 INSTALLED_APPS += THIRD_PARTY_APPS + CUSTOM_APPS
@@ -50,6 +48,7 @@ INSTALLED_APPS += THIRD_PARTY_APPS + CUSTOM_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
