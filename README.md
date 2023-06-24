@@ -28,7 +28,10 @@ cd food_delivery/
  - pip install -r requirements.txt
 ```
 
-  Or using pipenv (https://pipenv.pypa.io/en/latest/)
+## NB:
+```Unlike pipenv that can load .env variables, python's default virtual environment creation cannot load environment variables. You would have to leverage on a package such as autoenv to load the .env variables. The quickest fix is to replace the values directly in the settings.py file```
+
+Or using pipenv (https://pipenv.pypa.io/en/latest/) - Recommended
 
 - Establish database connection by providing the database params in the .env file
 
