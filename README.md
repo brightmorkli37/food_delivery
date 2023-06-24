@@ -33,7 +33,7 @@ cd food_delivery/
 - Establish database connection by providing the database params in the .env file
 
 ## NB:
-```For local testing purposes, the default database configuration can be used. It has been commented out in favor of the custom database settings. To use it, uncomment it and comment out the custom database settings```
+```For local testing purposes, the default database configuration can be used. It has been commented out in favor of the custom database settings. To use it, uncomment it and comment out the custom database settings. This can be done in the project settings file in project_root/settings.py```
 
 - Run Migrations and Migrate 
 ```bash
