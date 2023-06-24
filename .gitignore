@@ -11,6 +11,6 @@ staticfiles
 .idea/
 general.log
 .env
-**/migrations/*
+*/migrations/00*
 staticfiles
 media
