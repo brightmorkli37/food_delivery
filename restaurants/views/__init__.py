@@ -1,1 +1,2 @@
 from .restaurant_viewset import RestaurantViewSet
+from .menu_item_viewset import MenuItemViewSet
